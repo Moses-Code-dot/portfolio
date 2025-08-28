@@ -1,1 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moses Wanjala - Portfolio</title>
+    <style>
+  /* ===== Reset & Fonts ===== */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7; 
+    color: #333; 
+    background: #f4f7fb;
+  }
+  a { color: #0073e6; text-decoration: none; transition: 0.3s; }
+  a:hover { color: #005bb5; }
 
+  /* ===== Header ===== */
+  header {
+    background: linear-gradient(135deg, #0d1b2a, #1b263b);
+    color: #fff;
+    padding: 3rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  header h1 { font-size: 2.8rem; margin-bottom: 0.5rem; }
+  header p { font-size: 1.2rem; opacity: 0.9; }
+  nav { margin-top: 1.5rem; }
+  nav a {
+    margin: 0 15px; 
+    color: #fff; 
+    font-weight: 600;
+    position: relative;
+  }
+  nav a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #0073e6;
+    transition: width 0.3s;
+    margin: auto;
+  }
+  nav a:hover::after { width: 100%; }
+
+  /* ===== Sections ===== */
+  section {
+    padding: 4rem 1rem;
+    max-width: 1100px;
+    margin: auto;
+  }
+  section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: #0d1b2a;
+    text-align: center;
+    position: relative;
+  }
+  section h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #0073e6;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+  }
+  section p { margin-bottom: 1rem; text-align: center; }
+
+  /* ===== Project Cards ===== */
+  #projects ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+  }
+  #projects li {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+  }
+  #projects li:hover { transform: translateY(-5px); }
+
+  /* ===== Skills as Tags ===== */
+  #skills p {
+    background: #fff;
+    display: inline-block;
+    margin: 8px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    font-weight: 500;
+  }
+
+  /* ===== Certificates ===== */
+  #certificates img {
+    margin: 20px auto;
+    display: block;
+    width: 350px;
+    border: 2px solid #eee;
+    border-radius: 12px;
+    transition: transform 0.3s;
+  }
+  #certificates img:hover { transform: scale(1.05); }
+
+  /* ===== Contact Form ===== */
+  form {
+    max-width: 550px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border 0.3s;
+  }
+  input:focus, textarea:focus { border: 1px solid #0073e6; outline: none; }
+  button {
+    background: #0d1b2a;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+  button:hover { background: #0073e6; transform: scale(1.05); }
+
+  /* ===== Resume Button ===== */
+  #resume { text-align: center; }
+  .resume-btn {
+    display: inline-block;
+    background: #0073e6;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: 0.3s;
+  }
+  .resume-btn:hover { background: #005bb5; transform: translateY(-3px); }
+
+  /* ===== Footer ===== */
+  footer {
+    background: #0d1b2a;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+  </style>
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header>
+    <h1>Moses Wanjala</h1>
+    <p>Cloud and Network Security | Cybersecurity | Virtual Assistant|</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===== About ===== -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+       I am <strong>Moses Wanjala</strong>, a cybersecurity enthusiast with a strong foundation in
+    <strong>cloud and network security</strong>. My experience includes working on security challenges such as
+    <em>Flaws.cloud</em> and <em>CloudGoat</em>, where I applied practical skills in vulnerability assessment,
+    privilege escalation analysis, and secure cloud configuration. I am proficient in tools such as
+    <strong>Wireshark, Linux (Kali), and Burp Suite</strong>, with expertise in <strong>Python scripting and AWS services</strong>.
+    I also have skills in <strong>virtual assistance</strong> and <strong>AI Career Essentials</strong>, which complement my
+    technical expertise and adaptability in modern digital environments.
+    </p>
+  </section>
+
+  <!-- ===== Projects ===== -->
+  <section id="projects">
+    <h2>Projects & Lab Challenges</h2>
+    <ul>
+      <li><strong>Flaws.cloud – AWS Security Challenge:</strong> Explored AWS misconfigurations in S3, IAM, and CloudFront, applying secure configuration best practices.</li>
+      <li><strong>CloudGoat – Vulnerable Lambda Scenario:</strong> Conducted a penetration test in AWS, discovering privilege escalation paths and applying least privilege principles.</li>
+      <li><strong>Wireshark Network Traffic Analysis:</strong> Analyzed network packets to detect HTTP requests, eavesdropping attempts, and suspicious activity.</li>
+      <li><strong>Eavesdropping & ARP Spoofing Defense Lab:</strong> Simulated ARP spoofing attacks and implemented VLAN segmentation and encryption for Layer 2 defense.</li>
+      <li><strong>Personal Portfolio Website:</strong> Designed and deployed this responsive portfolio on GitHub Pages.</li>
+    </ul>
+  </section>
+
+  <!-- ===== Skills ===== -->
+  <section id="skills">
+    <h2>Skills & Technologies</h2>
+    <p><strong>Cloud Platforms:</strong> AWS (EC2, S3, IAM, Lambda)& Azure</p>
+    <p><strong>Cybersecurity:</strong> Cloud Security, Network Security, Vulnerability Assessment, Penetration Testing</p>
+    <p><strong>Networking:</strong> VLANs, ARP Spoofing Defense, Packet Analysis</p>
+    <p><strong>Tools & Technologies:</strong> Wireshark, Linux (Kali), GitHub, Burp Suite</p>
+    <p><strong>Programming & Scripting:</strong> Python, Bash</p>
+    <p><strong>Soft Skills:</strong> Problem-Solving, Analytical Thinking, Attention to Detail, Continuous Learning, Teamwork, Communication</p>
+  </section>
+
+  <!-- ===== Certificates ===== -->
+  <section id="certificates">
+    <h2>Certificates</h2>
+    <p>Here are some of my certifications:</p>
+    <img src="images/aws_certificate.png" alt="AWS Certified Cloud Practitioner">
+    <p><em>AWS Certified Cloud Practitioner (2025)</em></p>
+    <!-- Add more certificates like this -->
+    <!-- <img src="images/other_cert.png" alt="Certificate Name"> -->
+  </section>
+
+  <!-- ===== Resume ===== -->
+  <section id="resume">
+    <h2>Resume</h2>
+    <p>You can download my latest resume below:</p>
+    <a href="files/Mary_Auma_Resume.pdf" download class="resume-btn">Download Resume</a>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>If you’d like to get in touch, please fill out the form below or email me at 
+      <a href="mailto:moseswanjalabwayo@gmail.com">moseswanjalabwayo@gmail.com</a>.
+    </p>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <label for="name">Name</label><br>
+      <input type="text" id="name" name="name" required><br>
+
+      <label for="email">Email</label><br>
+      <input type="email" id="email" name="_replyto" required><br>
+
+      <label for="message">Message</label><br>
+      <textarea id="message" name="message" rows="5" required></textarea><br>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>© 2025 Moses Wanjala| Portfolio</p>
+  </footer>
+</body>
+</html>
