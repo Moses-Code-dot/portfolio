@@ -4,11 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Moses Wanjala - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
     <style>
   /* ===== Reset & Fonts ===== */
+      html {
+  scroll-behavior: smooth;
+}
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    body { 
+    font-family: 'Poppins', sans-serif;
     line-height: 1.7; 
     color: #333; 
     background: #f4f7fb;
@@ -76,14 +82,16 @@
     list-style: none;
     padding: 0;
   }
-  #projects li {
-    background: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-    transition: transform 0.3s;
-  }
-  #projects li:hover { transform: translateY(-5px); }
+ #projects li {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+#projects li:hover { transform: translateY(-5px) scale(1.02); }
 
   /* ===== Skills as Tags ===== */
   #skills p {
@@ -159,6 +167,20 @@
     padding: 1.5rem;
     margin-top: 2rem;
   }
+    /* Alternate background colors for sections */
+section:nth-child(even) {
+  background: #eef2f7;
+}
+    /* Animate sections */
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s ease-in-out;
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
   </style>
 </head>
 <body>
@@ -256,5 +278,17 @@
   <footer>
     <p>© 2025 Moses Wanjala| Portfolio</p>
   </footer>
+  <script>
+const sections = document.querySelectorAll("section");
+const options = { threshold: 0.2 };
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("visible");
+    }
+  });
+}, options);
+sections.forEach(section => observer.observe(section));
+</script>
 </body>
 </html>
