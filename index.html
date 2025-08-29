@@ -49,22 +49,6 @@
     margin: auto;
   }
   nav a:hover::after { width: 100%; }
-@media (max-width: 768px) {
-  nav {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
-  }
-  nav a {
-    display: block;
-    padding: 10px;
-    background: #1b263b;
-    border-radius: 8px;
-    width: 100%;
-    text-align: center;
-  }
-}
 
   /* ===== Sections ===== */
   section {
@@ -124,8 +108,7 @@
   #certificates img {
     margin: 20px auto;
     display: block;
-      max-width: 100%;
-      height: auto;
+    width: 350px;
     border: 2px solid #eee;
     border-radius: 12px;
     transition: transform 0.3s;
@@ -197,17 +180,6 @@ section {
 section.visible {
   opacity: 1;
   transform: translateY(0);
-}
-    @media (max-width: 600px) {
-  section {
-    padding: 2rem 1rem;
-  }
-  header h1 {
-    font-size: 2rem;
-  }
-  section h2 {
-    font-size: 1.6rem;
-  }
 }
   </style>
 </head>
@@ -324,4 +296,4 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach(section => observer.observe(section));
 </script>
 </body>
-</html>
+</html> 
